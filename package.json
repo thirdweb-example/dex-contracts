@@ -9,6 +9,7 @@
     "hardhat": "^2.10.1"
   },
   "dependencies": {
+    "@openzeppelin/contracts-upgradeable": "^4.8.2",
     "@thirdweb-dev/contracts": "^3"
   }
 }
