@@ -73,24 +73,23 @@ contract DEX is ERC20Base {
         }
     }
 
-    function swapEthTotoken(uint256 _tokensSold, uint256 _minEth) public {
+    function swapEthTotoken() public payable {
         uint256 _reservedTokens = getTokensInContract();
         uint256 _tokensBought = getAmountOfTokens(
-            _tokensSold, 
-            _reservedTokens, 
-            address(this).balance);
-            require(_tokensBought >= _minEth, "Insufficient Output Amount");
-            ERC20Base(token).transfer(msg.sender, _tokensBought);
+            msg.value, 
+            address(this).balance, 
+            _reservedTokens
+        );
+        ERC20Base(token).transfer(msg.sender, _tokensBought);
     }
 
-    function swapTokenToEth(uint256 _tokensSold, uint256 _minEth) public {
+    function swapTokenToEth(uint256 _tokensSold) public {
         uint256 _reservedTokens = getTokensInContract();
         uint256 ethBought = getAmountOfTokens(
-        _tokensSold,
-        _reservedTokens,
-        address(this).balance
+            _tokensSold,
+            _reservedTokens,
+            address(this).balance
         );
-        require(ethBought >= _minEth, "insufficient output amount");
         ERC20Base(token).transferFrom(
             msg.sender, 
             address(this), 
