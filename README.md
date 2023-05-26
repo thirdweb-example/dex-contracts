@@ -1,47 +1,25 @@
-## Getting Started
+# DEX contracts
 
-Create a project using this example:
+> **Warning:** This code is not audited. Use at your own risk.
 
-```bash
-npx thirdweb create --contract --template hardhat-javascript-starter
-```
+This contracts in this repository can be used with the [DEX app repository](https://github.com/thirdweb-example/dex-app).
 
-You can start editing the page by modifying `contracts/Contract.sol`.
+## Compiling the contract
 
-To add functionality to your contracts, you can use the `@thirdweb-dev/contracts` package which provides base contracts and extensions to inherit. The package is already installed with this project. Head to our [Contracts Extensions Docs](https://portal.thirdweb.com/contractkit) to learn more.
-
-## Building the project
-
-After any changes to the contract, run:
+Use the following command to compile the contract:
 
 ```bash
-npm run build
-# or
-yarn build
+npx thirdweb build
 ```
 
-to compile your contracts. This will also detect the [Contracts Extensions Docs](https://portal.thirdweb.com/contractkit) detected on your contract.
+## Deploying the contract
 
-## Deploying Contracts
-
-When you're ready to deploy your contracts, just run one of the following command to deploy you're contracts:
+Use the following command to deploy the contract to any EVM chain:
 
 ```bash
-npm run deploy
-# or
-yarn deploy
+npx thirdweb deploy
 ```
 
-## Releasing Contracts
+## Conclusion
 
-If you want to release a version of your contracts publicly, you can use one of the followings command:
-
-```bash
-npm run release
-# or
-yarn release
-```
-
-## Join our Discord!
-
-For any questions, suggestions, join our discord at [https://discord.gg/thirdweb](https://discord.gg/thirdweb).
+If you need support, feel free to join our [Discord server](https://discord.gg/thirdweb). For any feedback related to thirdweb, please leave them on our [feedback board](https://feedback.thirdweb.com).
