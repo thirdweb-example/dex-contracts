@@ -94,7 +94,7 @@ contract DEX is ERC20Base {
             msg.sender, 
             address(this), 
             _tokensSold
-            );
+        );
         payable(msg.sender).transfer(ethBought);
     }
     
